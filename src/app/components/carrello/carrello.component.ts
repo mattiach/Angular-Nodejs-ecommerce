@@ -1,5 +1,6 @@
-import { IProduct } from './../../interfaces/iproduct';
+import { IProduct } from 'src/app/interfaces/iproduct';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrello',
@@ -11,7 +12,7 @@ export class CarrelloComponent implements OnInit {
   carrello: IProduct[] = [];
   total: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     let carrello_localstorage = localStorage.getItem('carrello');
@@ -30,11 +31,24 @@ export class CarrelloComponent implements OnInit {
   }
   
 
-  removeProcut(item: IProduct) {
+  removeProdut(item: IProduct) {
     this.carrello = this.carrello.filter(element => element !== item);
 
     this.totalCart();
     localStorage.setItem('carrello', JSON.stringify(this.carrello));
+  }
+
+
+  pulisciCart() {
+    // pulisce il localstorage e riaggiorna il totale prezzo-quantità
+    localStorage.clear();
+    this.totalCart();
+
+    // alert di conferma operazione
+    alert('Carrello svuotato correttamente, Grazie!');
+
+    // riporta alla pagina principale
+    this.router.navigate(['']);
   }
 
 }

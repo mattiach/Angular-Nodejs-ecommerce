@@ -3,3 +3,8 @@
     border: 1.5px solid black;
     box-shadow: 4px 4px !important;
 }
+
+.titolo {
+    font-weight:600;
+    text-shadow: 4px 0.1px rgb(2, 0, 0);
+}

@@ -3,3 +3,19 @@
     border: 2px solid #ffffff;
     border-radius: 4px;
 }
+
+
+.rimuovi-prodotto-btn {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0.0px;
+  padding-bottom: 0px;
+  width: 1;
+  height: 40px;
+  width: 30px;
+  margin-top: 15px;
+}

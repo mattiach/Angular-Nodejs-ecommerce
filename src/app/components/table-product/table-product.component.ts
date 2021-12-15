@@ -12,7 +12,10 @@ export class TableProductComponent implements OnInit {
 
   products: IProduct[] = [];
 
-  constructor(private ProductService: ProductService, private router: Router) { }
+  constructor(
+    private ProductService: ProductService,
+    private router: Router) { }
+    
 
   ngOnInit(): void {
     this.ProductService.getAllProducts().subscribe(response => this.products = response);

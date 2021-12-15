@@ -1,4 +1,4 @@
-<div class="container mt-5 bg-dark p-3 rounded-2">
+<div class="container mt-5 m-5 mx-auto bg-dark p-3 rounded-2" style="max-width: 800px;">
     <ul class="list-group">
         <li class="list-group-item active shadow-sm mb-2" aria-current="true">
             <h1 class="text-white text-center">
@@ -10,8 +10,7 @@
         <li class="list-group-item shadow-sm table-hover mt-1 d-flex justify-content-between" *ngFor="let item of carrello; index as i">
             <p>{{i+1}} - {{item.name}}</p>
             <span>{{item.price | currency: 'EUR'}}</span>
-            <span><i class="fab fa-playstation mx-3"></i></span>
-            <button class="btn btn-danger btn-sm mb-3" type="button" (click)="removeProcut(item)">
+            <button class="btn btn-danger btn-sm mb-3" type="button" (click)="removeProdut(item)">
                 <i class="bi bi-trash-fill"></i>
             </button>
         </li>

@@ -1,6 +1,9 @@
 <div class="container">
+    <h2 class="text-info display-2 mb-2 bg-light rounded-pill titolo">
+        CATALOGO PRODOTTI
+    </h2>
     <div class="row">
-        <div class="card col-lg-3 col-md-3 col-sm-5 m-1 bg-light shadow-lg p-2 rounded-3 carte"
+        <div class="card col-lg-3 col-md-3 col-sm-5 m-3 bg-light shadow-lg p-2 rounded-3 carte"
             *ngFor="let item of products">
             <!-- immagine -->
             <div class="text-center">
@@ -17,8 +20,8 @@
                 <hr>
 
                 <p class="card-text"><small class="text-muted">{{item.qt}} disponibili!</small></p>
-                <button class="btn btn-success form-control">
-                    {{item.price}},00 &euro;
+                <button class="btn btn-warning form-control shadow-sm" (click)="paginaPrincipale()">
+                    Prezzo di listino: {{item.price}},00 &euro;
                 </button>
             </div>
         </div>
