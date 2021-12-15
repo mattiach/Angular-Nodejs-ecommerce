@@ -19,11 +19,22 @@ export class CarrelloComponent implements OnInit {
     if(carrello_localstorage) {
       this.carrello = JSON.parse(carrello_localstorage);
     }
+
     this.totalCart();
   }
 
+
   totalCart() {
+    this.total = 0;
     this.carrello.forEach(element => this.total += element.price);
+  }
+  
+
+  removeProcut(item: IProduct) {
+    this.carrello = this.carrello.filter(element => element !== item);
+
+    this.totalCart();
+    localStorage.setItem('carrello', JSON.stringify(this.carrello));
   }
 
 }

@@ -11,7 +11,7 @@
             <p>{{i+1}} - {{item.name}}</p>
             <span>{{item.price | currency: 'EUR'}}</span>
             <span><i class="fab fa-playstation mx-3"></i></span>
-            <button class="btn btn-danger btn-sm mb-3" type="button">
+            <button class="btn btn-danger btn-sm mb-3" type="button" (click)="removeProcut(item)">
                 <i class="bi bi-trash-fill"></i>
             </button>
         </li>
