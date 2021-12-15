@@ -1,0 +1,9 @@
+.scheda-prodotto {
+  background-color: whitesmoke;
+  border: 1.5px solid black;
+  box-shadow: 8px 8px !important;
+}
+
+.scheda-prodotto-descrizione {
+  font-size: 0.9em;
+}

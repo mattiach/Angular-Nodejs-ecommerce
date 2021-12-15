@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="card col-lg-3 col-md-3 col-sm-5 m-1 bg-light shadow-lg p-2 rounded-3 carte"
+            *ngFor="let item of products">
+            <!-- immagine -->
+            <div class="text-center">
+                <img class="card-img-top" src="{{item.url}}" alt="Card image cap" style="max-width: 20rem;">
+            </div>
+
+            <!-- titolo, descrizione e prezzo -->
+            <div class="text-center">
+                <h5 class="card-title pt-2">{{item.name}}</h5>
+                <p class="card-text text-muted">
+                    Genere: {{item.genere}}
+                </p>
+
+                <hr>
+
+                <p class="card-text"><small class="text-muted">{{item.qt}} disponibili!</small></p>
+                <button class="btn btn-success form-control">
+                    {{item.price}},00 &euro;
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

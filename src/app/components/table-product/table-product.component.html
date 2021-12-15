@@ -1,0 +1,40 @@
+<div class="container-fluid my-3">
+    <h2 class="text-center text-info display-2 bg-light rounded-pill titolo">
+        LISTA COMPLETA
+    </h2>
+
+    <!-- Table con prodotti -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col"></th>
+                <th scope="col">Nome</th>
+                <th scope="col">Genere</th>
+                <th scope="col">Quantità</th>
+                <th scope="col">Prezzo</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of products; index as i">
+                <th scope="row">{{i + 1}}</th>
+                <th scope="row">
+                    <img src="{{item.url}}" alt="immagine prodotto {{item.url}}" height="80px" class="ombra-img">
+                </th>
+                <td class="pt-4">{{item.name}}</td>
+                <td class="pt-4">{{item.genere}}</td>
+                <td class="pt-4">{{item.qt}}</td>
+                <td class="pt-4">{{item.price}}</td>
+                <td class="pt-3">
+                    <button class="btn btn-danger mt-2" (click)="deleteProduct(item)">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                    <button class="btn btn-outline-dark mt-2 mx-1" (click)="detailProduct(item)">
+                        <i class="bi bi-eye-fill"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

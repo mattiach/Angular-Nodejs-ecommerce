@@ -1,0 +1,20 @@
+<section class="mt-5 mx-auto" style="width: 450px;">
+    <div class="text-center">
+        <div class="card p-2  scheda-prodotto" style="width: 25rem;">
+            <img src="{{detailProduct.url}}" class="card-img-top" alt="copertina di {{detailProduct.name}}">
+            <div class="card-body">
+                    <h2 class="display-5">
+                        {{detailProduct.name}} <br>
+                    </h2>
+                <p class="card-text scheda-prodotto-descrizione">
+                    <span class="text-muted">Genere: {{detailProduct.genere}}</span><br>
+                    <span class="w-50">
+                        <hr>
+                    </span>
+                    Ancora <span class="text-danger">{{detailProduct.qt}}</span> pezzi disponibili!
+                </p>
+                <button class="btn btn-success form-control" (click)="addToCart()">{{detailProduct.price}}$</button>
+            </div>
+        </div>
+    </div>
+</section>

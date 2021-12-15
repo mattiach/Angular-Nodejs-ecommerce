@@ -1,0 +1,23 @@
+<div class="container mt-5 bg-dark p-3 rounded-2">
+    <ul class="list-group">
+        <li class="list-group-item active shadow-sm mb-2" aria-current="true">
+            <h1 class="text-white text-center">
+                IL TUO CARRELLO
+            </h1>
+        </li>
+
+        <!-- prodotti aggiunti nel carrello -->
+        <li class="list-group-item shadow-sm table-hover mt-1 d-flex justify-content-between" *ngFor="let item of carrello; index as i">
+            <p>{{i+1}} - {{item.name}}</p>
+            <span>{{item.price | currency: 'EUR'}}</span>
+            <span><i class="fab fa-playstation mx-3"></i></span>
+            <button class="btn btn-danger btn-sm mb-3" type="button">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+        </li>
+    </ul>
+    <div class="card-footer text-white d-flex justify-content-between shadow" id="totale_div">
+        <span>Totale: {{total | currency: 'EUR'}}</span>
+        <span>Qt. {{carrello.length}}</span>
+    </div>
+</div>
