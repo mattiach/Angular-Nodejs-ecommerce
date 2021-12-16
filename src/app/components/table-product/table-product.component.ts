@@ -30,4 +30,23 @@ export class TableProductComponent implements OnInit {
   detailProduct(item: IProduct) {
     this.router.navigate(['product', item.id, 'detail']);
   }
+
+  addToCart(item: IProduct) {
+    let carrello: IProduct[] = [];
+    let carrello_localstorage = localStorage.getItem('carrello');
+
+    // Se esiste il carrello allora la variabile viene riempita con quello che è scritto nel localStorage.
+    if (carrello_localstorage) {
+      carrello = JSON.parse(carrello_localstorage);
+    }
+
+    // Push dell'oggetto iterato nella lista completa dei giochi nel carrello
+    carrello.push(item);
+
+    // Set del localStorage con il contenuto del carrello
+    localStorage.setItem('carrello', JSON.stringify(carrello));
+
+    // Vai al carrello
+    // this.router.navigate(['product/carrello']);
+  }
 }

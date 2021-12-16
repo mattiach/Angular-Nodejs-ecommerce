@@ -1,5 +1,5 @@
 import { IProduct } from 'src/app/interfaces/iproduct';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class CarrelloComponent implements OnInit {
 
-  carrello: IProduct[] = [];
-  total: number = 0;
+  @Output() carrello: IProduct[] = [];
+  @Output() total: number = 0;
 
   constructor(private router: Router) { }
 

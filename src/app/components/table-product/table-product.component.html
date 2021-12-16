@@ -27,6 +27,9 @@
                 <td class="pt-4">{{item.qt}}</td>
                 <td class="pt-4">{{item.price}}</td>
                 <td class="pt-3">
+                    <button class="btn btn-success mt-2 mx-1" (click)="addToCart(item)">
+                        <i class="bi bi-cart-check-fill"></i>
+                    </button>
                     <button class="btn btn-danger mt-2" (click)="deleteProduct(item)">
                         <i class="bi bi-trash-fill"></i>
                     </button>
