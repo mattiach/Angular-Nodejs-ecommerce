@@ -19,3 +19,10 @@
   width: 30px;
   margin-top: 15px;
 }
+
+
+.ombra-img {
+    background-color: whitesmoke;
+    border: 1.5px solid black;
+    box-shadow: 5px 4px #ffd207;
+}

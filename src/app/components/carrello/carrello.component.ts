@@ -17,11 +17,15 @@ export class CarrelloComponent implements OnInit {
   ngOnInit(): void {
     let carrello_localstorage = localStorage.getItem('carrello');
 
-    if(carrello_localstorage) {
+    if (carrello_localstorage) {
       this.carrello = JSON.parse(carrello_localstorage);
     }
 
     this.totalCart();
+  }
+
+  aggiorna() {
+    setTimeout(() => { this.ngOnInit() }, 500)
   }
 
 
@@ -29,7 +33,7 @@ export class CarrelloComponent implements OnInit {
     this.total = 0;
     this.carrello.forEach(element => this.total += element.price);
   }
-  
+
 
   removeProdut(item: IProduct) {
     this.carrello = this.carrello.filter(element => element !== item);
@@ -37,18 +41,4 @@ export class CarrelloComponent implements OnInit {
     this.totalCart();
     localStorage.setItem('carrello', JSON.stringify(this.carrello));
   }
-
-
-  pulisciCart() {
-    // pulisce il localstorage e riaggiorna il totale prezzo-quantità
-    localStorage.clear();
-    this.totalCart();
-
-    // alert di conferma operazione
-    alert('Carrello svuotato correttamente, Grazie!');
-
-    // riporta alla pagina principale
-    this.router.navigate(['']);
-  }
-
 }

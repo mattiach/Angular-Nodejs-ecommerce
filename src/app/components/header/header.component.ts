@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
     this.totalCart();
 
-    setTimeout(() => { this.ngOnInit() }, 200)
+    setTimeout(() => { this.ngOnInit() }, 10)
   }
 
   totalCart() {

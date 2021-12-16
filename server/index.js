@@ -12,7 +12,8 @@ let productList = [
     { id: 1, name: 'Monopoly: Madness', genere: 'Area Game', qt: 8, price: 35.00, url: 'https://static-it.gamestop.it/images/products/306048/3max.jpg' },
     { id: 2, name: 'Battlefield 2042', genere: 'Sparatutto', qt: 20, price: 64.00, url: 'https://static-it.gamestop.it/images/products/302226/3max.jpg' },
     { id: 3, name: 'Team Sonic Racing', genere: 'Azione', qt: 12, price: 20.00, url: 'https://static-it.gamestop.it/images/products/306442/3max.jpg' },
-    { id: 4, name: 'Chorus - Day One Edition', genere: 'Avventura', qt: 16, price: 45.00, url: 'https://static-it.gamestop.it/images/products/302226/3max.jpg' },
+    { id: 4, name: 'Far Cry 6', genere: 'Avventura', qt: 89, price: 79.00, url: 'https://static-it.gamestop.it/images/products/299527/3max.jpg' },
+    { id: 5, name: 'Chorus - Day One Edition', genere: 'Avventura', qt: 16, price: 45.00, url: 'https://static-it.gamestop.it/images/products/305670/3max.jpg' },
     { id: 6, name: 'Tekken 7', genere: 'Picchiaduro', qt: 40, price: 40.00, url: 'https://static-it.gamestop.it/images/products/306169/3max.jpg' },
     { id: 7, name: 'The Elder Scrolls V: Skyrim', genere: 'RPG Fantasy', qt: 30, price: 20.00, url: 'https://static-it.gamestop.it/images/products/306052/3max.jpg' },
     { id: 8, name: 'The Wild At Heart', genere: 'Avventura', qt: 4, price: 15.00, url: 'https://static-it.gamestop.it/images/products/305929/3max.jpg' },
@@ -28,8 +29,7 @@ let productList = [
     { id: 18, name: 'All Star Brawl', genere: 'Avventura', qt: 43, price: 59.00, url: 'https://static-it.gamestop.it/images/products/305258/3max.jpg' },
     { id: 19, name: 'MechWarrior 5: Mercenaries', genere: 'Sparatutto', qt: 7, price: 32.00, url: 'https://static-it.gamestop.it/images/products/305361/3max.jpg' },
     { id: 20, name: 'Fast & Furious', genere: 'Azione', qt: 11, price: 49.00, url: 'https://static-it.gamestop.it/images/products/304078/3max.jpg' },
-    { id: 21, name: 'Little Nightmares', genere: 'Horror', qt: 1, price: 29.00, url: 'https://static-it.gamestop.it/images/products/305768/3max.jpg' },
-    { id: 22, name: 'Far Cry 6', genere: 'Avventura', qt: 89, price: 79.00, url: 'https://static-it.gamestop.it/images/products/299527/3max.jpg' }
+    { id: 21, name: 'Little Nightmares', genere: 'Horror', qt: 1, price: 29.00, url: 'https://static-it.gamestop.it/images/products/305768/3max.jpg' }
 ];
 
 app.get('/product', (request, response) => {

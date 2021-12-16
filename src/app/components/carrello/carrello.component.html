@@ -7,10 +7,12 @@
         </li>
 
         <!-- prodotti aggiunti nel carrello -->
-        <li class="list-group-item shadow-sm table-hover mt-1 d-flex justify-content-between" *ngFor="let item of carrello; index as i">
-            <p>{{i+1}} - {{item.name}}</p>
-            <span>{{item.price | currency: 'EUR'}}</span>
-            <button class="btn btn-danger btn-sm mb-3" type="button" (click)="removeProdut(item)">
+        <li class="list-group-item shadow-sm table-hover mt-1 d-flex justify-content-between"
+            *ngFor="let item of carrello; index as i">
+            <p><img src="{{item.url}}" alt="immagine prodotto" width="45px" class="ombra-img"></p>
+            <p class="mt-3"> {{item.name}}</p>
+            <span class="mt-3">{{item.price | currency: 'EUR'}}</span>
+            <button class="btn btn-danger btn-sm mb-3 mt-3" type="button" (click)="removeProdut(item)">
                 <i class="bi bi-trash-fill"></i>
             </button>
         </li>
