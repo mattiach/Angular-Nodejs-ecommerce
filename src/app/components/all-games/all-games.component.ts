@@ -12,7 +12,6 @@ export class AllGamesComponent implements OnInit {
 
   products: IProduct[] = [];
 
-
   constructor(
     private ProductService: ProductService,
     private router: Router) { }
@@ -39,5 +38,4 @@ export class AllGamesComponent implements OnInit {
     // Vai al carrello
     // this.router.navigate(['product/carrello']);
   }
-
 }
