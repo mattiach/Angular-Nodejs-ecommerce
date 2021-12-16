@@ -24,15 +24,24 @@
                 </th>
                 <td class="pt-4">{{item.name}}</td>
                 <td class="pt-4">{{item.genere}}</td>
-                <td class="pt-4">{{item.qt}}</td>
-                <td class="pt-4">{{item.price}}</td>
+                <td class="pt-4 text-center">{{item.qt}}</td>
+                <td class="pt-4">
+                    {{item.price | currency:'EUR'}}
+                </td>
+                
+                <!-- Buttons -->
                 <td class="pt-3">
+                    <!-- ADD -->
                     <button class="btn btn-success mt-2 mx-1" (click)="addToCart(item)">
                         <i class="bi bi-cart-check-fill"></i>
                     </button>
+
+                    <!-- DELETE -->
                     <button class="btn btn-danger mt-2" (click)="deleteProduct(item)">
                         <i class="bi bi-trash-fill"></i>
                     </button>
+
+                    <!-- DETAILS -->
                     <button class="btn btn-outline-dark mt-2 mx-1" (click)="detailProduct(item)">
                         <i class="bi bi-eye-fill"></i>
                     </button>
