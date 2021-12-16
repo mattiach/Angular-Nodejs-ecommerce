@@ -21,10 +21,6 @@ export class AllGamesComponent implements OnInit {
     this.ProductService.getAllProducts().subscribe((response: IProduct[]) => this.products = response);
   }
 
-  paginaPrincipale() {
-    this.router.navigate(['']);
-  }
-
   addToCart(item: IProduct) {
     let carrello: IProduct[] = [];
     let carrello_localstorage = localStorage.getItem('carrello');
