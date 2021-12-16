@@ -20,10 +20,19 @@
                 <hr>
 
                 <p class="card-text"><small class="text-muted">{{item.qt}} disponibili!</small></p>
-                <button class="btn btn-warning form-control shadow-sm" (click)="paginaPrincipale()">
-                    Prezzo di listino: {{item.price}},00 &euro;
-                </button>
+                <div>
+                    <button class="btn btn-success form-control shadow-sm"
+                        (click)="addToCart(item)">
+                        {{item.price | currency:'EUR'}}
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- <div class="col-6">
+    <button class="btn btn-warning btn-sm shadow-sm" (click)="paginaPrincipale()">
+        Prezzo di listino: {{item.price}},00 &euro;
+    </button>
+</div> -->
