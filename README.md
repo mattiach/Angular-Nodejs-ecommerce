@@ -2,7 +2,7 @@ Before to open this project you must to install Bootstrap, Bootstrap's icons and
 Use this terminal commands
 ====================================
 
-// Installation for Angular CLI :
+// Installation for Angular CLI : 
 ng add @ng-bootstrap/ng-bootstrap
 
 // Installation for Bootstrap-Icons :
